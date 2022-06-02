@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exchanging Keys Phase</title>
+      <style>
+             body{text-align:center}
+         </style>
+</head>
+<body>
+<h1>
+    Keys Sharing
+</h1>
+</p>
+            <img src="/static/Keys Sharing.PNG">
+   <p>
+
+       <p>
+    In asymmetric cryptography, a common system for encrypting data, there are two decryption tools, or “keys.” The first is a private key that only the user knows, and the other is a public key, which is safe to share with everyone.
+
+</p>
+
+<p> Now apply your knowledge and try to answer the following question,</p>
+        <h>
+            Which key is to be sent to Bob?
+        </h>
+
+        <p>
+         <form    action="/exchanged_keys" method="POST">
+         <details>
+             <summary>Use the Public Key</summary>
+             <label for="pub"> {{msg1}}</label>
+         </details>
+            <input type="radio" id="pub" name="keytype" value="public" required><br><br>
+
+         <details> <summary> Use the Private Key</summary>
+             <label for="pri"> {{msg2}} </label>
+         </details>
+            <input type="radio" id="pri" name="keytype" value="private" required><br><br>
+            <input type="submit" value="Submit">
+        </p>
+
+
+
+
+</form>
+</body>
+</html>

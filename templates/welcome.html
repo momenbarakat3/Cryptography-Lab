@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome!</title>
+     <style>
+             body{text-align:center}
+         </style>
+
+</head>
+<body>
+
+<h1>   Keys Generation </h1>
+
+             <img src="/static/Keys Generation.PNG">
+
+
+
+     <h1>
+         What is the relation between public and private key?
+     </h1>
+
+     <p>
+         The public key and private key are generated together and tied together. Both rely on the same very large secret prime numbers. The private key is the representation of two very large secret prime numbers. Metaphorically, the public key is the product number: it is made up of the same two very large prime numbers used to make the private key. What’s amazing is that it’s very hard to figure out which two large prime numbers created the public key.
+
+     </p>
+
+     <h1>
+         How the keys are
+         generated?
+     </h1>
+     <p>
+         First, for the public key, you start with two random prime numbers ("p" and "q"), if you have a 2048-bit key, then P and Q are both 1024 bits long.
+         You multiply them together; that's your "modulus" -- the unique part of your public key.
+         The other part of your public key (the "exponent") doesn't need to be unique, but it should be prime; most people just use 65537 because it's safe enough, and it makes your implementation fast.
+     </p>
+     <p>     Second, for the corresponding private key, All you need to do is find the modulo multiplicative inverse of your public exponent with respect to (p-1) times (q-1). That result you get, that's your private exponent; that's the "secret" part about your private key.
+     </p>
+        <p>
+            <em> Click <a href={{url_for('generate_keys')}}>Next </a> to generate your public and private keys</em>
+
+
+                   {{message}}
+               </p>
+</body>
+</html>
