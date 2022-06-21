@@ -9,13 +9,10 @@
 </head>
 <body>
 <h1>Signing</h1>
-
-
             <img src="/static/Signing.PNG">
 <p>
      The data is signed by hashing the message with a hashing algorithm and the sender’s private key. This produces a hash digest, which can only be recreated through use of one of the keys in the key pair created by the sender. The recipient then receives the message, the hash digest, and the public key, if they did not already have it. The recipient then uses the sender’s public key to hash the message they have received. If the resulting hash digest matches the hash digest that has been sent along with the message, then the identity of the sender has been confirmed. This also confirms that the data has not been changed in transit. However, signing alone does not ensure the data has not been intercepted and read.
 </p>
-
 <h1>
     Now you have the following two encrypted messages, Using Trial and Error method try to know who sent these messages
 </h1>
@@ -25,55 +22,43 @@
 <h>
     {{message1}}
 </h>
-
 <h1>
     Message 2:
 </h1>
-
 <h>
     {{message2}}
 </h> <br><br><br><br><br><br><br>
-
 <form action="/after_signing" method="POST">
     <div>
 <div>   <h>
     Message 1:
 </h>
 </div>
-
-             <label> Daniel's Public Key</label>
+             <label> Daniel </label>
              <input type="radio" id="msg1" name="m1" value="dan" required><br><br>
-             <label> Bob's Public Key </label>
+             <label> Bob </label>
              <input type="radio" id="msg2" name="m1" value="bob" ><br><br>
-             <label> Your Private Key </label>
+             <label> Sam </label>
              <input type="radio" id="msg3" name="m1" value="you" ><br><br>
     <div>  <a href= {{url_for("message1")}} target="_blank">Check The listed Options before Selection</a></div>
 </div>
     <br><br><br><br><br>
-
 <div>
     <div>
           <h>
     Message 2:
 </h>
     </div>
-
-             <label> Daniel's Public Key</label>
+             <label> Daniel </label>
              <input type="radio" id="msg4" name="m2" value="dan" ><br><br>
-             <label> Bob's Public Key </label>
+             <label> Bob </label>
              <input type="radio" id="msg5" name="m2" value="bob" required><br><br>
-             <label> Your Private Key </label>
+             <label> Sam </label>
              <input type="radio" id="msg6" name="m2" value="you" ><br><br>
              <div>  <a href= {{url_for("message2")}} target="_blank">Check The listed Options before Selection</a></div>
              <input type="submit" value="Submit">
-
-
 </div>
-
 </form>
-
-
-
 </body>
 </html>
 

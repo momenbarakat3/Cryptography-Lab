@@ -17,49 +17,35 @@
 </h1>
 <p>
     Hashing is the process of converting a given key into another value. A hash function is used to generate the new value according to a mathematical algorithm. The result of a hash function is known as a hash value or simply, a hash.
-
 </p>
                                     <img src="/static/Hashing1.PNG">
-
 <p>
     A good hash function uses a one-way hashing algorithm, or in other words, the hash cannot be converted back into the original key.
-
 </p>
-
                   <img src="/static/Hashing2.PNG">
 <h1>
     Collisions
 </h1>
 <p>
     Keep in mind that two keys can generate the same hash. This phenomenon is known as a collision. There are several ways to handle collisions, but that’s a topic for another time.
-
 </p>
-
                   <img src="/static/Hashing3.PNG">
-
 <h1>
     Applications
 </h1>
 <p>
     Hashing is most commonly used to implement hash tables. A hash table stores key/value pairs in the form of a list where any element can be accessed using its index.
-
 Since there is no limit to the number of key/value pairs, we can use a hash function to map the keys to the size of the table; the hash value becomes the index for a given element.
-
 A simple hashing approach would be to take the modular of the key (assuming it’s numerical) against the table’s size:
 </p>
-
 <h1>
     index=key MOD tableSize
-
 </h1>
-
 <p>
     This will ensure that the hash is always within the limits of the table size.
 </p>
-
 <p>
     Hashing is also used in data encryption. Passwords can be stored in the form of their hashes so that even if a database is breached, plaintext passwords are not accessible. MD5, SHA-1 and SHA-2 are popular cryptographic hashes.
 </p>
-
 </body>
 </html>
